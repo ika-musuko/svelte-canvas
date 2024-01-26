@@ -136,9 +136,7 @@
   class={className}
   width={_width * _pixelRatio}
   height={_height * _pixelRatio}
-  style:width={width ? `${width}px` : '100%'}
-  style:height={height ? `${height}px` : '100%'}
-  {style}
+  style={style || `width: ${width ? `${width}px` : '100%'}; height: ${height ? `${height}px` : '100%'}`}
   on:touchstart|preventDefault={layerTouchStartHandler}
   on:mousemove={layerMouseMoveHandler}
   on:pointermove={layerMouseMoveHandler}
